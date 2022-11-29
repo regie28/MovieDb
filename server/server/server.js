@@ -28,7 +28,7 @@ app.get('/',(req, res) => {
     )
 })
 
-//Get all category
+//Get all Movies
 
 app.get('/movie', async (req, res) => {
    try {
@@ -38,7 +38,7 @@ app.get('/movie', async (req, res) => {
     console.log(error)
    }
 })
-
+//Get All TV Shows
 app.get('/tvshow', async (req, res) => {
     try {
      const tvshow = await pool.query("SELECT * FROM public.tvshow ORDER BY tvshowid ASC")
@@ -47,15 +47,7 @@ app.get('/tvshow', async (req, res) => {
      console.log(error)
     }
  })
-//Get all Product
-app.get('/product', async (req, res) => {
-    try {  
-        const product = await pool.query("SELECT * FROM public.product ORDER BY productid ASC")
-        res.json(product.rows)
-    } catch (error) {
-        console.log(error)
-    }
-    })
+
 //Get all User
 app.get('/usermdb', async (req, res) => {
     try {
