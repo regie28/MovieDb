@@ -1,0 +1,20 @@
+{
+  "name": "moviedb-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "concurrently": "^7.2.1",
+    "react-router-dom": "^6.4.5"
+  },
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "deploy": "git subtree push --prefix server heroku master",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Reginald Bartiana",
+  "license": "ISC",
+  "description": "This is my first P.E.R.N Project"
+}
