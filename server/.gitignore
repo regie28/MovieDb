@@ -1,6 +1,0 @@
-*.env
-node_modules
-*.vscode
-client/.eslintcache
-.request.http
-*.rest
